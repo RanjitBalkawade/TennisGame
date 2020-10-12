@@ -14,7 +14,7 @@ class TennisGameTests: XCTestCase {
     var sut: TennisGame!
 
     override func setUp() {
-        self.sut = TennisGame()
+        self.sut = TennisGame(player1: Player(), player2: Player())
     }
 
     override func tearDown() {
@@ -23,5 +23,10 @@ class TennisGameTests: XCTestCase {
 
     func test_TennisGameExists() {
         XCTAssertNotNil(self.sut)
+    }
+
+    func test_gameHasTwoPlayers() {
+        XCTAssertNotNil(sut.player1)
+        XCTAssertNotNil(sut.player2)
     }
 }
