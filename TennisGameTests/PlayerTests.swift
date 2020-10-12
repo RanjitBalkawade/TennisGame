@@ -24,4 +24,8 @@ class PlayerTests: XCTestCase {
     func test_playerExists() {
         XCTAssertNotNil(sut)
     }
+
+    func test_PlayerHasInitialScoreLove() {
+        XCTAssertEqual(sut.score, .love)
+    }
 }
