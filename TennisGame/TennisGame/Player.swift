@@ -13,6 +13,19 @@ enum Score: Int {
     case fifteen
     case thirty
     case fourty
+
+    var scoreDescription: String {
+        switch self {
+            case .love:
+                return "love"
+            case .fifteen:
+                return "fiteen"
+            case .thirty:
+                return "thirty"
+            case .fourty:
+                return "fourty"
+        }
+    }
 }
 
 class Player {
