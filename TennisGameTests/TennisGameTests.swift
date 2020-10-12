@@ -29,4 +29,10 @@ class TennisGameTests: XCTestCase {
         XCTAssertNotNil(sut.player1)
         XCTAssertNotNil(sut.player2)
     }
+
+    func test_gameStartedWithScoreLoveLove() {
+        XCTAssertEqual(sut.player1.score, .love)
+        XCTAssertEqual(sut.player2.score, .love)
+    }
+
 }
