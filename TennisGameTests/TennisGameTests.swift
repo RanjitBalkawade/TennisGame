@@ -44,4 +44,11 @@ class TennisGameTests: XCTestCase {
         XCTAssertEqual(sut.player1.score, .fifteen)
         XCTAssertEqual(sut.player2.score, .love)
     }
+
+    func test_ifPlayer1ScoresSecondPoint_scoreIsThirty_love() {
+        sut.play(scoringPlayer: player1)
+        sut.play(scoringPlayer: player1)
+        XCTAssertEqual(sut.player1.score, .thirty)
+        XCTAssertEqual(sut.player2.score, .love)
+    }
 }

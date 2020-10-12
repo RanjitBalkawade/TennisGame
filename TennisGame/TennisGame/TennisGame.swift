@@ -18,6 +18,11 @@ class TennisGame {
     }
 
     func play(scoringPlayer: Player) {
-        scoringPlayer.score = Score.fifteen
+        updateScore(scoringPlayer: scoringPlayer)
+    }
+
+    private func updateScore(scoringPlayer: Player) {
+        let  newRawScore = scoringPlayer.score.rawValue + 1
+        scoringPlayer.score = Score(rawValue: newRawScore) ?? .love
     }
 }
