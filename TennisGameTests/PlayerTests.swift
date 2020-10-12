@@ -1,5 +1,5 @@
 //
-//  TennisGameTests.swift
+//  PlayerTests.swift
 //  TennisGameTests
 //
 //  Created by Bogdan Iusco on 12/10/2020.
@@ -9,19 +9,19 @@
 import XCTest
 @testable import TennisGame
 
-class TennisGameTests: XCTestCase {
+class PlayerTests: XCTestCase {
 
-    var sut: TennisGame!
+    var sut: Player!
 
     override func setUp() {
-        self.sut = TennisGame()
+        sut = Player()
     }
 
     override func tearDown() {
-        self.sut = nil
+        sut = nil
     }
 
-    func test_TennisGameExists() {
-        XCTAssertNotNil(self.sut)
+    func test_playerExists() {
+        XCTAssertNotNil(sut)
     }
 }
