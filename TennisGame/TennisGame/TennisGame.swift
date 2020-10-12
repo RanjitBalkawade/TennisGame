@@ -16,4 +16,8 @@ class TennisGame {
         self.player1 = player1
         self.player2 = player2
     }
+
+    func play(scoringPlayer: Player) {
+        scoringPlayer.score = Score.fifteen
+    }
 }

@@ -12,9 +12,13 @@ import XCTest
 class TennisGameTests: XCTestCase {
 
     var sut: TennisGame!
+    var player1: Player!
+    var player2: Player!
 
     override func setUp() {
-        self.sut = TennisGame(player1: Player(), player2: Player())
+        self.player1 = Player()
+        self.player2 = Player()
+        self.sut = TennisGame(player1: self.player1, player2: self.player2)
     }
 
     override func tearDown() {
@@ -35,4 +39,9 @@ class TennisGameTests: XCTestCase {
         XCTAssertEqual(sut.player2.score, .love)
     }
 
+    func test_ifPlayer1ScoresfirstPoint_scoreIsFifteen_love() {
+        self.sut.play(scoringPlayer: self.player1)
+        XCTAssertEqual(sut.player1.score, .fifteen)
+        XCTAssertEqual(sut.player2.score, .love)
+    }
 }
